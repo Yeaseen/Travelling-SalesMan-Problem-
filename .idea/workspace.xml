@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7b75b75-b6e0-41d6-9c4e-4684c019fd4e" name="Default" comment="" />
+    <list default="true" id="c7b75b75-b6e0-41d6-9c4e-4684c019fd4e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSP.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,9 +20,10 @@
       <file leaf-file-name="TSP.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TSP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="618">
+              <caret line="93" column="72" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#153#159#0" expanded="true" />
               </folding>
             </state>
@@ -32,6 +38,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -54,6 +63,9 @@
     <option name="y" value="24" />
     <option name="width" value="1400" />
     <option name="height" value="1028" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -153,12 +165,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530957673505</updated>
-      <workItem from="1530957681186" duration="8973000" />
+      <workItem from="1530957681186" duration="13077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8973000" />
+    <option name="totallyTimeSpent" value="13077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
@@ -172,7 +184,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
@@ -202,9 +214,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/TSP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="618">
+          <caret line="93" column="72" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#153#159#0" expanded="true" />
           </folding>
         </state>
