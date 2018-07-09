@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 class data{
    int x, y,idN;
@@ -24,7 +25,7 @@ public class TSP {
     static double[][] adjMat=null;
     static ArrayList<data> nodeCO= new ArrayList<data>();
     static ArrayList<data> paTH= new ArrayList<data>();
-    static double cost=0;
+
 
 
     public static void main(String[] args) {
@@ -65,23 +66,100 @@ public class TSP {
 
 
 
-        //func1(2);
-        func2(10);
-        System.out.print("PATH IS: ");
-        for (int i = 0; i < paTH.size() ; i++) {
-            if(i<paTH.size()-1)System.out.print(paTH.get(i).idN+"-->");
-            else System.out.print(paTH.get(i).idN);
+        NearestNeighbour(8);
+        printPathCost(paTH);
+        twoOptPathResult(paTH);
+//        NearestInsertion(10);
+//        printPathCost(paTH);
 
-            if(i<=paTH.size()-2) {
-                cost+=adjMat[paTH.get(i).idN][paTH.get(i+1).idN];
+
+    }
+
+    public static void printPathCost(ArrayList<data> route){
+        double cost=0;
+        System.out.print("PATH IS: ");
+        for (int i = 0; i < route.size() ; i++) {
+            if(i<route.size()-1) System.out.print(route.get(i).idN+"-->");
+            else System.out.print(route.get(i).idN);
+
+            if(i<=route.size()-2) {
+                cost+=adjMat[route.get(i).idN][route.get(i+1).idN];
             }
         }
         System.out.println("\nCOST: "+cost);
 
     }
 
+    public static double getPathCost(ArrayList<data> route){
+        double cres=0;
+        for (int i = 0; i < route.size() ; i++) {
 
-    public static void func2(int i){
+            if(i<=route.size()-2) {
+                cres+=adjMat[route.get(i).idN][route.get(i+1).idN];
+            }
+        }
+        return cres;
+
+    }
+
+    public static void twoOptPathResult(ArrayList<data> route){
+        double oldC=getPathCost(route);
+        for (int i = 2; i < route.size()-2; i++) {
+            System.out.println("i: "+i);
+            for (int j = i+1; j < route.size()-1 ; j++) {
+                ArrayList<data> newRoute=twoOptSwap(route,i,j);
+                double newC=getPathCost(newRoute);
+                if(newC<oldC){
+                    route=newRoute;
+                }
+            }
+
+        }
+
+        printPathCost(route);
+
+
+    }
+
+
+    public static ArrayList<data> twoOptSwap(ArrayList<data> route, int i, int k){
+
+        ArrayList<data> firstPortion=new ArrayList<data>(route.subList(0,i-1));
+//        for (int j = 0; j <firstPortion.size() ; j++) {
+//            System.out.print(firstPortion.get(j).idN+"-->");
+//        }
+//        System.out.println();
+        ArrayList<data> secndPart=new ArrayList<data>(route.subList(i-1,k));
+//        for (int j = 0; j < secndPart.size() ; j++) {
+//            System.out.print(secndPart.get(j).idN+" ");
+//        }
+//        System.out.println();
+        Collections.reverse(secndPart);
+//        for (int j = 0; j < secndPart.size() ; j++) {
+//            System.out.print(secndPart.get(j).idN+" ");
+//        }
+//        System.out.println();
+        ArrayList<data> thirdPart=new ArrayList<data>(route.subList(k,route.size()));
+//        for (int j = 0; j < thirdPart.size() ; j++) {
+//            System.out.print(thirdPart.get(j).idN+" ");
+//        }
+//        System.out.println();
+
+        ArrayList<data> res=new ArrayList<data>();
+
+        res.addAll(firstPortion);
+        res.addAll(secndPart);
+        res.addAll(thirdPart);
+
+        return res;
+
+
+    }
+
+
+
+
+    public static void NearestInsertion(int i){
         nodeCO.get(i).visited=true;
         paTH.add(0,nodeCO.get(i));
 
@@ -97,11 +175,11 @@ public class TSP {
                 //System.out.println("idN"+paTH.get(j).idN);
                 minNode=getMinimumOfColumn(paTH.get(j).idN);
             }
-            System.out.println("min Node--> "+minNode);
+            //System.out.println("min Node--> "+minNode);
 
             int destM=0;
             double min= Double.MAX_VALUE;
-            System.out.println("path size=="+paTH.size());
+            //System.out.println("path size=="+paTH.size());
             for (int j = 0; j < paTH.size()-1 ; j++) {
                 //System.out.println("j:  "+j);
                 //System.out.println(adjMat[paTH.get(j).idN][minNode]+ " "+adjMat[minNode][paTH.get(j+1).idN]+ " "+adjMat[paTH.get(j).idN]
@@ -129,12 +207,10 @@ public class TSP {
 
     }
 
-    public static void func1(int i){
+    public static void NearestNeighbour(int i){
         paTH.add(nodeCO.get(i));
         getTSPPath(i);
         paTH.add(nodeCO.get(i));
-
-
     }
 
 
