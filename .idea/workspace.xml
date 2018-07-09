@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7b75b75-b6e0-41d6-9c4e-4684c019fd4e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TSP.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TSP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TSP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.class" afterDir="false" />
-    </list>
+    <list default="true" id="c7b75b75-b6e0-41d6-9c4e-4684c019fd4e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -169,15 +164,15 @@
       <workItem from="1530957681186" duration="14158000" />
       <workItem from="1531037174951" duration="3174000" />
       <workItem from="1531140278876" duration="230000" />
-      <workItem from="1531140856332" duration="9942000" />
+      <workItem from="1531140856332" duration="10208000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27504000" />
+    <option name="totallyTimeSpent" value="27770000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
+    <frame x="-1" y="-4" width="1922" height="1085" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
